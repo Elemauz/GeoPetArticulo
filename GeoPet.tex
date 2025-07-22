@@ -1,0 +1,275 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{setspace}
+
+\geometry{margin=2.5cm}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{GeoPet}
+\lhead{Proyecto Estudiantil}
+\rfoot{\thepage}
+\renewcommand{\baselinestretch}{1.2}
+
+\begin{document}
+
+% ----------------------------- PORTADA -----------------------------
+\begin{titlepage}
+\begin{center}
+\large
+
+\textbf{\LARGE UNIVERSIDAD NACIONAL DEL ALTIPLANO}\\[0.5cm]
+\textbf{\normalsize FACULTAD DE INGENIERÍA MECÁNICA ELÉCTRICA, ELECTRÓNICA Y SISTEMAS}\\[0.5cm]
+\textbf{\normalsize ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS}\\[1.5cm]
+\rule{\linewidth}{0.5mm}\\
+\textbf{\Huge GeoPet: Turismo interactivo mediante ludificación}\\
+\rule{\linewidth}{0.5mm}\\[1cm]
+
+\begin{flushleft}
+\textbf{Curso:} Algoritmos y Estructuras De Datos\\[0.5cm]
+\textbf{Área:} Sistemas de Información\\[1cm]
+
+\textbf{Integrantes:}
+\begin{itemize}
+    \item Antony Brandon Quispe Calizaya \\
+    \textit{Correo: antonyquispe23@gmail.com} \\
+    \textit{Celular: +51 916 887 458}
+    \item Brayan Luis Calderon Calderon \\
+    \textit{Correo: brayancalderon.20014@gmail.com} \\
+    \textit{Celular: +51 960 096 116}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textbf{Asesor:} Ing. Aldo Hernan Zanabria Galvez\\[1cm]
+
+\textbf{Fecha:} Puno, 26 junio del 2025
+\end{flushleft}
+
+\vfill
+
+\end{center}
+\end{titlepage}
+
+
+% ----------------------------- INICIO DEL ARTÍCULO -----------------------------
+
+
+\section{Descripción del Problema o Necesidad}
+
+El turismo tradicional depende ampliamente de guías humanos o folletos impresos como principales fuentes de información. Si bien estos medios han sido útiles durante décadas, presentan limitaciones significativas en el contexto actual. Por ejemplo, requieren la disponibilidad física de un guía en todo momento, lo cual no siempre es posible o deseado por todos los turistas, especialmente aquellos que buscan una experiencia más autónoma, flexible o inmersiva. Los folletos, por su parte, suelen contener información estática, desactualizada o limitada en cuanto a contexto histórico, cultural o logístico.
+
+En la era digital, donde el acceso a la información y la personalización de experiencias es cada vez más demandada, es fundamental brindar herramientas tecnológicas que transformen la manera en que las personas interactúan con los espacios turísticos. Los turistas modernos, especialmente los jóvenes, esperan poder descubrir, aprender y desplazarse por nuevos lugares de forma sencilla, atractiva e intuitiva, sin depender necesariamente de un tercero o material físico.
+
+En respuesta a esta necesidad, surge GeoPet, una aplicación móvil que busca revolucionar la experiencia turística tradicional mediante la ludificación. GeoPet convierte el proceso de visitar lugares turísticos en una actividad interactiva, educativa y divertida. La aplicación no solo permite a los usuarios descubrir y explorar puntos de interés relevantes sin la necesidad de un guía físico, sino que también introduce una capa narrativa mediante el uso de “mascotas virtuales”. Estas mascotas están asociadas a cada lugar importante y actúan como representantes del mismo, contando su historia, relevancia cultural o datos curiosos mediante diálogos, ilustraciones o contenido audiovisual.
+\section{Objetivos}
+
+\subsection{Objetivo General}
+
+Desarrollar una aplicación móvil interactiva que transforme la experiencia turística convencional en una experiencia innovadora mediante el uso de técnicas de ludificación, permitiendo a los usuarios explorar de forma autónoma y personalizada los puntos de interés turístico. La aplicación deberá integrar tecnologías de geolocalización, narrativas visuales y elementos interactivos como mascotas virtuales, con el fin de fomentar el aprendizaje, la curiosidad y el disfrute durante los recorridos turísticos, sin necesidad de depender de guías físicos o material impreso.
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+    \item \textbf{Identificar y clasificar puntos turísticos relevantes:} 
+    Investigar y seleccionar lugares de interés turístico que posean valor histórico, cultural, natural o social. Esta clasificación permitirá diferenciar entre puntos de alto y bajo impacto, facilitando una presentación priorizada y significativa para el usuario.
+
+    \item \textbf{Implementar una API propia para gestionar datos turísticos y del usuario:} 
+    Desarrollar un backend eficiente denominado “Mascotas”, que centralice la gestión de la información relacionada a los puntos turísticos, las interacciones del usuario, el almacenamiento de su progreso, y la lógica para personalizar la experiencia en función de sus preferencias.
+
+    \item \textbf{Integrar mapas interactivos utilizando Google Maps SDK y Directions API:} 
+    Incorporar funcionalidades cartográficas y de navegación a través del SDK de Google Maps, permitiendo al usuario ubicar con precisión los puntos de interés y seguir rutas optimizadas para llegar a ellos desde su ubicación actual.
+
+    \item \textbf{Representar puntos de interés mediante mascotas con historias educativas:} 
+    Asociar a cada lugar importante una “mascota” virtual, un personaje con identidad propia que sirva como narrador o guía ficticio del sitio. Estas mascotas contarán historias, anécdotas o hechos históricos relevantes, fomentando el aprendizaje y la conexión emocional con el destino.
+
+    \item \textbf{Filtrar información visual para evitar sobrecarga en el mapa:} 
+    Implementar mecanismos de filtrado dinámico que permitan al usuario visualizar únicamente los puntos que se ajusten a sus intereses, ubicación o nivel de experiencia en la aplicación. Esto busca mejorar la usabilidad del mapa, reducir el ruido visual y hacer más efectiva la planificación de recorridos.
+\end{itemize}
+
+\section{Alcances y Limitaciones}
+
+\textbf{Alcances:}
+\begin{itemize}
+    \item \textbf{Implementación de una aplicación funcional en Android utilizando Jetpack Compose:} 
+    Se desarrollará una app móvil completamente operativa para dispositivos Android, haciendo uso del moderno framework de desarrollo Jetpack Compose, lo que permite una interfaz de usuario declarativa, dinámica y eficiente.
+
+    \item \textbf{Uso de mascotas virtuales asociadas a los lugares de interés:} 
+    Cada punto turístico contará con una mascota virtual que representará el lugar y servirá como medio para transmitir su historia, cultura o curiosidades. Estas mascotas añaden un componente narrativo y lúdico a la experiencia del usuario.
+
+    \item \textbf{Navegación entre puntos usando rutas generadas por Google Directions API:} 
+    Se integrará la funcionalidad de rutas dinámicas que permitirá a los usuarios desplazarse de un punto a otro siguiendo caminos optimizados, facilitando su movilidad sin necesidad de orientación externa.
+
+    \item \textbf{Interacción básica con el backend propio (API “Mascotas”):} 
+    La app podrá comunicarse con una API personalizada para obtener datos turísticos, registrar avances del usuario, y proporcionar contenido adaptado según las preferencias del mismo.
+\end{itemize}
+
+\textbf{Limitaciones:}
+\begin{itemize}
+    \item \textbf{No incluye funciones de guía turística en tiempo real:} 
+    GeoPet no reemplaza completamente a un guía humano en cuanto a interacción verbal o atención personalizada. No se contempla el uso de asistentes virtuales por voz ni acompañamiento en tiempo real durante los recorridos.
+
+    \item \textbf{Limitado a dispositivos Android:} 
+    La aplicación está desarrollada exclusivamente para la plataforma Android, por lo que no se encuentra disponible para dispositivos iOS u otros sistemas operativos móviles en esta versión inicial.
+
+    \item \textbf{Base de datos de puntos limitada a ciertas regiones:} 
+    La base de datos de puntos turísticos abarca únicamente zonas piloto seleccionadas (por ejemplo, una región o ciudad turística determinada), por lo que no se garantiza una cobertura nacional ni internacional en la etapa actual del desarrollo.
+
+    \item \textbf{Requiere conexión a internet para la mayoría de funciones:} 
+    La visualización de mapas, obtención de rutas y acceso a las historias de las mascotas requiere conectividad activa, lo cual podría limitar su uso en zonas rurales o con mala cobertura de red.
+\end{itemize}
+
+\section{Metodología}
+
+\subsection*{Metodología de Desarrollo}
+
+Para el desarrollo del proyecto GeoPet se adoptó una metodología ágil, específicamente el enfoque de \textit{Scrum}, que permitió un trabajo iterativo e incremental con entregas funcionales al final de cada sprint semanal. Esta elección se debió a la necesidad de validar rápidamente funcionalidades clave como la visualización de mapas, la interacción con puntos turísticos y el sistema de mascotas, permitiendo una evolución continua del producto con base en pruebas y retroalimentación.
+
+Cada sprint se estructuró con planificación inicial, desarrollo modular, revisión intermedia, pruebas funcionales y cierre. Las tareas fueron distribuidas en bloques funcionales:
+\begin{itemize}
+    \item \textbf{Módulo de visualización de mapas:} integración de mapas interactivos y visualización de puntos turísticos.
+    \item \textbf{Módulo de mascotas:} diseño del sistema narrativo con entidades visuales asociadas a los lugares.
+    \item \textbf{Módulo backend/API:} implementación de una API propia para gestión de datos y persistencia.
+    \item \textbf{Persistencia de datos:} almacenamiento local y remoto de progreso, preferencias y puntos visitados.
+\end{itemize}
+
+Las pruebas se realizaron de forma continua, utilizando dispositivos físicos con distintas versiones de Android y emuladores para asegurar la compatibilidad. Además, se emplearon pruebas unitarias para la lógica crítica y pruebas manuales para la validación de experiencia de usuario.
+
+\subsection*{Algoritmos y Modelos}
+
+En el componente de filtrado de puntos turísticos, se implementaron algoritmos básicos de clasificación y priorización basados en:
+\begin{itemize}
+    \item \textbf{Ubicación geográfica:} cercanía al usuario y agrupamiento por zonas.
+    \item \textbf{Preferencias del usuario:} tipo de interés, historial de visitas y selección previa.
+\end{itemize}
+
+La combinación de estos criterios permitió desarrollar un sistema flexible para mostrar u ocultar puntos según su relevancia individual, mejorando así la navegabilidad del mapa.
+
+\subsection*{Herramientas Tecnológicas}
+
+El desarrollo del proyecto se sustentó en un conjunto de herramientas modernas y ampliamente utilizadas en la industria del software móvil. Entre ellas se destacan:
+
+\begin{itemize}
+    \item \textbf{Lenguaje de programación:} Kotlin, por su compatibilidad con Android y su enfoque moderno y conciso para desarrollo móvil.
+    
+    \item \textbf{Framework de UI:} Jetpack Compose, utilizado para construir interfaces de usuario declarativas, dinámicas y reactivas, con gran flexibilidad en diseño y animaciones.
+    
+    \item \textbf{APIs externas:}
+    \begin{itemize}
+        \item \textbf{Google Maps SDK:} para visualización cartográfica y marcadores personalizados.
+        \item \textbf{Google Directions API:} para cálculo y visualización de rutas entre puntos de interés.
+    \end{itemize}
+    
+    \item \textbf{Backend/API propia:} API desarrollada en lenguaje Python con el framework FastAPI, denominada “API Pets”, encargada de gestionar los datos turísticos, registrar ubicación del usuario, aparicion aleatoria de las mascotas dentro de las ciudades designadas según un area circular específica y filtrar puntos según criterios personalizados.
+    
+    \item \textbf{Base de Datos:}
+    \begin{itemize}
+        \item \textbf{SQLite:} utilizada para almacenamiento local de configuraciones y caché de datos.
+        \item \textbf{Firebase o base de datos personalizada:} como respaldo en la nube y sincronización de información entre sesiones de usuario.
+    \end{itemize}
+    
+    \item \textbf{Control de versiones:} Git, utilizando GitHub como repositorio colaborativo para manejo de versiones, historial de cambios y seguimiento de errores o funcionalidades pendientes.
+    
+    \item \textbf{Gestión de tareas con tablero Kanban:} Se utilizó un tablero Kanban para la planificación, seguimiento y control del desarrollo del proyecto. Esta metodología visual permitió dividir el trabajo en tareas concretas, distribuidas en columnas como “Por hacer”, “En progreso”, “Finalizado” e “Ideas de implementación”, favoreciendo la organización y priorización del trabajo colaborativo. Se empleó \textit{Trello} como herramienta principal por su interfaz intuitiva para la gestión de tareas y su integración con notificaciones y recordatorios.
+    
+    \item \textbf{Pruebas y depuración:} Se utilizaron emuladores de Android Studio para pruebas iniciales, complementados con dispositivos físicos para validación de experiencia de usuario real. Las herramientas de depuración nativas permitieron identificar y corregir errores en tiempo real.
+    
+    \item \textbf{Entorno de desarrollo:} Android Studio, configurado con emuladores de prueba y herramientas de depuración nativas.
+\end{itemize}
+
+\section{Recursos}
+
+\subsection{Recursos Humanos}
+\begin{itemize}
+    \item \textbf{Antony Calizaya:} Desarrollador frontend, diseño, lógica de navegación y comportamiento de la aplicacion, integración de las API necesarias de Google.
+    \item \textbf{Brayan Calderon:} Desarrollador Backend, diseño, implementación y lanzamiento de la API mascotas, ademas de realizar las conexiones necesarias con la App Movil.
+    \item \textbf{Asesor académico:} Supervisión y guia para el desarrollo del proyecto, brinda recursos importantes y ayuda a establecer metas semanales para el modelo SCRUM.
+    \item \textbf{Colaboradores externos:} Apoyo en recopilación de puntos turísticos (feedback de usuarios, necesita del lanzamiento de la App).
+\end{itemize}
+
+\subsection{Recursos Financieros}
+
+\begin{longtable}{|p{8cm}|p{3cm}|}
+\hline
+\textbf{Descripción} & \textbf{Costo (S/)} \\
+\hline
+Uso del entorno para Kotlin(App) & 00.00 \\
+Uso del entorno para python, c++, cython, etc (API) & 00.00 \\
+Hosting para pruebas en campo (Lanzamiento de la API) & 30.00 \\
+Licencias y suscripciones (Uso de APIs externas) & 00.00 \\
+\hline
+\textbf{Total estimado} & \textbf{30.00} \\
+\hline
+\end{longtable}
+
+\section{Resultados}
+
+\begin{itemize}
+    \item Desarrollo exitoso de una app funcional que muestra puntos representativos en el mapa.
+    \item Implementación del sistema de mascotas para representar lugares emblemáticos.
+    \item Integración de rutas dinámicas entre puntos con Google Directions API.
+    \item Reducción de sobrecarga visual en el mapa gracias al filtrado de puntos no relevantes.
+\end{itemize}
+
+Los usuarios pueden ver claramente los puntos marcados en el mapa sin saturacion visual, el trazado de rutas es correcto y la información se actualiza en tiempo real.
+\section{Conclusiones}
+
+GeoPet demuestra que es posible hacer del turismo una actividad más accesible, entretenida y educativa mediante herramientas tecnológicas modernas. La ludificación y la narrativa de mascotas agregan valor a la exploración cultural, motivando al usuario a aprender mientras viaja. El uso de mapas inteligentes y filtrado visual mejora significativamente la experiencia de uso frente a mapas convencionales recargados.
+
+\section{Referencias Bibliográficas}
+
+\begin{thebibliography}{99}
+    \bibitem{Xu2015} Xu, F., Buhalis, D., \& Weber, J. (2015). Gamification in tourism. In \textit{Information and Communication Technologies in Tourism 2015} (pp. 525–537). Springer.
+    \bibitem{Pradhan2023} Pradhan, P. M., \& Ghimire, M. (2023). Mobile applications for sustainable tourism: a review. \textit{Sustainability}, 15(1), 12.
+    \bibitem{Weber2017} Weber, J., \& Rech, J. (2017). \textit{Learning and enjoyment in location-based augmented reality applications}. Springer.
+    \bibitem{Emerald2020} Hernández-Muñoz, M. (2020). Interactive storytelling for tourism heritage: a systematic review. \textit{Journal of Heritage Tourism}, 15(2), 168–183.
+    \bibitem{Fishoeder2018} Fischoeder, M. (2018). Tourist behavior and information retention in gamified mobile experiences. \textit{Tourism Management}, 65, 72–85.
+    \bibitem{Architecture2019} Chung, N., Lee, H., \& Han, H. (2019). Heritage tourism in the mobile era: the role of gamification. \textit{Journal of Architecture and Planning}, 84(6), 27–34.
+    \bibitem{Frontiers2024} Martínez, A., \& Sánchez, L. (2024). Edutainment in mobile heritage tourism: a user-centered approach. \textit{Frontiers in Psychology}, 15, 1883.
+    \bibitem{Swacha2017} Swacha, J. (2017). Design of a gamification framework for tourist mobile applications. \textit{Procedia Computer Science}, 104, 550–555.
+    \bibitem{Xu2014} Xu, F., \& Buhalis, D. (2014). Big data analytics in tourism\textit{Tourism Review}, 69(3), 1–4.
+    \bibitem{ToARist2020} Ali, A., \& Frew, A. (2020). Absence of digital tools in tourism support in rural areas. \textit{Tourism and Rural Development}, 2(1), 91–105.
+    \bibitem{Intech2019} Rusu, D., \& Orboi, M. D. (2019). ICT for cultural tourism development in less developed regions. \textit{IntechOpen}.
+    \bibitem{Arxiv2025} Chen, H., \& Zhao, Y. (2025). Optimizing Tourist Routes Using GIS and AI Models. \textit{arXiv preprint arXiv:2501.01001}.
+    \bibitem{Tandfonline2025} Liu, M., et al. (2025). Participatory GIS for tourism planning. \textit{Journal of Spatial Science}. https://doi.org/10.1080/14498596.2025.101002
+    \bibitem{Kawanaka2021} Kawanaka, H. (2021). Visualizing tourist preferences with GIS-based interfaces. \textit{Information Systems in Tourism}, 43(3), 243–257.
+    \bibitem{TravelPlot2018} Kim, J., \& Kim, H. (2018). TravelPlot: Location-based gamification for tourism. \textit{Entertainment Computing}, 25, 44–52.
+    \bibitem{TourismMobility2021} García, S., \& Yáñez, J. (2021). Barriers to digital mobility in tourism: the case of isolated regions. \textit{Tourism, Technology and Mobility}, 2(3), 35–49.
+    \bibitem{NatureGIS2022} Rojas, J., \& Becker, A. (2022). GIS-based tourism analysis for protected areas. \textit{Nature Sustainability}, 5(4), 389–397.
+    \bibitem{google-maps}
+    Google Developers. (2023). \textit{Maps SDK for Android}. Recuperado de: \url{https://developers.google.com/maps/documentation/android-sdk}
+
+    \bibitem{compose}
+    Android Developers. (2023). \textit{Jetpack Compose Overview}. Recuperado de: \url{https://developer.android.com/jetpack/compose}
+
+    \bibitem{werbach}
+    Werbach, K., \& Hunter, D. (2012). \textit{For the Win: How Game Thinking Can Revolutionize Your Business}. Wharton Digital Press.
+
+    \bibitem{firebase}
+    Firebase Documentation. (2023). \textit{Firebase for Android}. Recuperado de: \url{https://firebase.google.com/docs/android/setup}
+
+    \bibitem{fastapi}
+    FastAPI Documentation. (2023). \textit{FastAPI}. Recuperado de: \url{https://fastapi.tiangolo.com/}
+\end{thebibliography}
+
+
+\section{Anexos}
+
+\begin{itemize}
+    \item \textbf{Código fuente de la App:} \url{https://github.com/Elemauz/GeoPet}
+    \item \textbf{Código fuente de la API:} \url{https://github.com/BCa209/API-pets}
+    \item \textbf{Evidencias adicionales:} \url{https://drive.google.com/drive/folders/1iMK3_A-AShpes9FL-i4Oh9os2zrHVjbU?usp=sharing}
+\end{itemize}
+
+\end{document}
